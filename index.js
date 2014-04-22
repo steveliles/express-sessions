@@ -166,7 +166,7 @@ var SessionStore = function (options, cb) {
             var schema = new mongoose.Schema({
                 sid: { type: String, required: true, unique: true },
                 data: { type: {} },
-                lastAccess: { type: Date, index: { expires: parseInt(options.expire) * 1000} },
+                lastAccess: { type: Date, index: { expires: parseInt(options.expire) } },
                 expires: { type: Date, index: true }
             });
 
